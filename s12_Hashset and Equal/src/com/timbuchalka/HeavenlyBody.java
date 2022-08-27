@@ -37,6 +37,11 @@ public final class HeavenlyBody {
         return new HashSet<>(this.satellites);
     }
 
+    // Check if the object is equal
+    // referencing to the same thing.
+    // Need to override equal and hashcode
+    
+    @Override
     public boolean equals(Object obj) {
         if(this == obj) {
             return true;
@@ -48,10 +53,17 @@ public final class HeavenlyBody {
             return false;
         }
 
+        //Cast this obj as the HeavenlyBody Class.
         String objName = ((HeavenlyBody) obj).getName();
         return this.name.equals(objName);
     }
-
+    
+    @Override
+    public int hashCode() {
+        System.out.println("hashcode called");
+        return this.name.hashCode() + 57;
+    }
+ 
 
 
 

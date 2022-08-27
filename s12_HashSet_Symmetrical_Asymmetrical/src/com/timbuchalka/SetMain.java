@@ -52,6 +52,12 @@ public class SetMain {
         String[] divineWords = {"to", "err", "is", "human", "to", "forgive", "divine"};
         divine.addAll(Arrays.asList(divineWords));
         
+        /*
+         * nature - divine:
+				all but art thee nature unknown 
+			divine - nature:
+				err forgive divine human 
+         */
         System.out.println("nature - divine:");
         Set<String> diff1 = new HashSet<>(nature);
         diff1.removeAll(divine);
@@ -70,7 +76,12 @@ public class SetMain {
         System.out.println("Symmetric difference");
         unionTest.removeAll(intersectionTest);
         printSet(unionTest);
-
+        /*
+         * 
+         * CONTAIN ALL check if it is a superset of the other
+         * just a true or false;
+         */
+        
         if(nature.containsAll(divine)) {
             System.out.println("divine is a subset of nature");
         }

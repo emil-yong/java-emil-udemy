@@ -20,6 +20,21 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/*
+ * A Set is meant to be unique but if two objects are pointing in the different reference then it will allows duplicates
+ * To check we just see if it is equal.
+ * 
+ * HashCOde determines which object is going into the bucket
+ * if both object are in the same bucket have the same hashcode
+ * if the object is added to the bucket and if there is object inside it wil compare
+ * for example if object 2 is inside the bucket and object 6 is going to be added to the bucket
+ * it will check object 6
+ * 
+ * Collection class will be responsible to do the checking.
+ * Hence need to override the hashcode in the heavenlyBody class.
+ * 
+ * NO matter how many times you generate, the has code will be the same 
+ */
 public class Main {
     private static Map<String, HeavenlyBody> solarSystem = new HashMap<>();
     private static Set<HeavenlyBody> planets = new HashSet<>();

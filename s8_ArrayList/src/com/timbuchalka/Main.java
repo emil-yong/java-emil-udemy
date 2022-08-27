@@ -95,7 +95,7 @@ public class Main {
         String[] myArray = new String[groceryList.getGroceryList().size()];
         myArray = groceryList.getGroceryList().toArray(myArray);
 
-
+System.out.println();
     }
 
 
